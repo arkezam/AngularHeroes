@@ -3,20 +3,20 @@ import { CommonModule } from '@angular/common';
 
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import {MatButtonModule} from '@angular/material/button';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
  
-
-
+import {SidebarModule} from 'primeng/sidebar';
+import {ButtonModule} from 'primeng/button';
 @NgModule({
  
-  imports: [
-    CommonModule,
-    MatSlideToggleModule,
-    MatButtonModule
-  ],
+ 
   exports:[
+    BrowserAnimationsModule,
     CommonModule,
-    MatSlideToggleModule,
-    MatButtonModule
+    SidebarModule,
+    ButtonModule
   ]
 })
 export class MatrialModule { }
