@@ -9,14 +9,8 @@ import { ListadoComponent } from './page/listado/listado.component';
 const routes: Routes = [
   {
     path: 'heroes',
-    component:HeroeComponent,
+    component:HomeComponent,
     children: [
-      {
-        path: '',
-        component:HomeComponent,
-        pathMatch:'full'
- 
-      },
       {
         path:'listado',
         component:ListadoComponent
@@ -40,7 +34,7 @@ const routes: Routes = [
       },
       {
         path: '**',
-        redirectTo: 'listado'
+        redirectTo: 'home'
       }
     ]
   }

@@ -7,7 +7,8 @@ import { HeroesRoutingModule } from './heroes-routing.module';
 import { ListadoComponent } from './page/listado/listado.component';
 import { HeroeComponent } from './page/heroe/heroe.component';
 import { MatrialModule } from '../matrial/matrial.module';
-
+import { HeroetarjetaComponent } from './components/heroetarjeta/heroetarjeta.component';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -16,12 +17,17 @@ import { MatrialModule } from '../matrial/matrial.module';
     AgregarComponent,
     BuscarComponent,
     ListadoComponent,
-    HeroeComponent
+    HeroeComponent,
+    HeroetarjetaComponent
   ],
   imports: [
     CommonModule,
     HeroesRoutingModule,
-    MatrialModule
+    MatrialModule,
+    RouterModule
+  ],
+  exports:[
+    RouterModule
   ]
 })
 export class HeroesModule { }

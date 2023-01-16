@@ -1,0 +1,18 @@
+ 
+
+<div class="container">
+    <div class="grid">
+        <div class="col">
+            <button pButton pRipple type="button" icon="pi pi-bars"  type="button" (click)="display = true"   class="p-button-rounded"></button>
+            </div>
+        <div class="col">
+            <button pButton pRiple type="button" label="Logout"></button>
+        </div>
+    </div>
+</div>
+<p-sidebar [(visible)]="display" [baseZIndex]="10000">
+    <h1 style="font-weight:normal">Left Sidebar</h1>
+
+    <p-listbox [options]="cities" [(ngModel)]="selectedCity" (click)="display = false" (onChange)="onCitySelect(selectedCity)"    optionLabel="name" [style]="{'width':'15rem'}"></p-listbox>
+    
+</p-sidebar>

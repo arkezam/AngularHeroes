@@ -9,9 +9,9 @@ import { SharedModule } from './shared/shared.module';
 import { AppRoutingModule } from './app-routing.module';
 import { HeroesModule } from './heroes/heroes.module';
 import { MatrialModule } from './matrial/matrial.module';
-import {AccordionModule} from 'primeng/accordion';     //accordion and accordion tab
-import {MenuItem} from 'primeng/api'; 
+ 
 
+import { HttpClientModule } from '@angular/common/http'
 @NgModule({
   declarations: [
     AppComponent, 
@@ -24,7 +24,7 @@ import {MenuItem} from 'primeng/api';
     HeroesModule,
     AppRoutingModule,
     MatrialModule,
-    
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,17 @@
+<p-card [header]="heroe.superhero" subheader="{{heroe.alter_ego}}"   styleClass="p-card-shadow">
+    <ng-template pTemplate="header">
+        <img alt="Card" src="assets/heroes/{{heroe.id}}.jpg">
+    </ng-template>
+    <ng-template pTemplate="body">
+        {{heroe.publisher}}
+        <p>
+            <strong>Primera aparición: </strong> {{heroe.first_appearance}}
+            
+            <strong>Personajes: </strong> {{heroe.characters}}
+        </p>  
+
+        <button pButton type="button" label="Ver mas.." class="p-button-success p-button-text" [routerLink]="['/heroes',heroe.id]"></button>
+        <button pButton type="button" label="Editar" class="p-button-info p-button-text"  [routerLink]="['/heroes/editar',heroe.id]"></button>
+    </ng-template>
+
+</p-card>

@@ -5,12 +5,12 @@ interface City {
   code: string
 }
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
+  selector: 'app-sidebar',
+  templateUrl: './sidebar.component.html',
   styles: [
   ]
 })
-export class HomeComponent {
+export class SidebarComponent {
   display:boolean =false
 
 
@@ -31,5 +31,4 @@ export class HomeComponent {
       this.router.navigate(['/heroes', city.code])
     
   }
-
 }

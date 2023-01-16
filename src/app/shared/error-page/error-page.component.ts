@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { NgModel } from '@angular/forms';
-import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-error-page',
@@ -10,5 +8,5 @@ import { RouterModule } from '@angular/router';
 })
 
 export class ErrorPageComponent {
-
+ 
 }

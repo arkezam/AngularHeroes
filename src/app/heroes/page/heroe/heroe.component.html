@@ -1,4 +1,24 @@
-
-<h2>Bienvenido a HEroes</h2>
-
-<router-outlet></router-outlet>
+<h2>Heroe:</h2>
+<div class="grid">
+    
+    <div class="col-12 text-center" *ngIf="!heroe; else mostrar">
+        <p-progressSpinner [style]="{width: '50px', height: '50px'}" styleClass="custom-spinner" strokeWidth="8" fill="var(--surface-ground)" animationDuration=".5s"></p-progressSpinner>
+    
+    </div>
+    <p-button label="atras" icon="pi pi-success" routerLink="/heroes/listado"></p-button>
+    
+        <ng-template #mostrar>
+            <div class="col-6">
+            <p-card header="Advanced Card" subheader="Card Subheader"   styleClass="p-card-shadow">
+                <ng-template pTemplate="header">
+                    <img alt="Card" src="assets/heroes/{{heroe.id}}.jpg">
+                </ng-template>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
+                    quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</p>
+                <ng-template pTemplate="footer">
+                    <p-button label="Save" icon="pi pi-check"></p-button>
+              </ng-template>
+            </p-card></div>
+        </ng-template>
+    </div>
+ 
