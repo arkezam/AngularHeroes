@@ -1,2 +1,48 @@
- <h3>Bienvenido a agregar</h3>
+<p-toast></p-toast>
+<p-toast position="top-left" key="tl"></p-toast>
+<p-toast position="top-center" key="tc"></p-toast>
+<p-toast position="bottom-center" key="bc"></p-toast>
  
+ 
+ <h2>Nuevo Heroe</h2>
+
+ <div class="grid">
+    <div class="col-6 ">
+        <span class="p-float-label mt-5" >
+            <input id="float-input" type="text" pInputText [(ngModel)]="heroe.superhero"> 
+            <label for="float-input">Super Heroe</label>
+        </span>
+        
+        <span class="p-float-label  mt-5">
+            <input id="float-input" type="text" pInputText [(ngModel)]="heroe.alter_ego"> 
+            <label for="float-input">Alter ego</label>
+        </span>
+        
+        <span class="p-float-label mt-5">
+            <input id="float-input" type="text" pInputText [(ngModel)]="heroe.characters"> 
+            <label for="float-input">Caracteres</label>
+        </span>
+        
+        <span class="p-float-label mt-5">
+            <input id="float-input" type="text" pInputText [(ngModel)]="heroe.first_appearance"> 
+            <label for="float-input">Primera aparicion</label>
+        </span>
+        
+        <span class="p-float-label mt-5">
+            <input id="float-input" type="text" pInputText [(ngModel)]="heroe.alt_img"> 
+            <label for="float-input">URL image</label>
+        </span>
+        
+        <p-dropdown [options]="publisher" [(ngModel)]="heroe.publisher"  optionLabel="name"></p-dropdown>
+        <span class="p-float-label mt-5">
+            
+        <p-button class="mt-5" label="Guardar" (onClick)="guardar()" ></p-button>
+        
+        <p-button class="mt-5" label="Borrar" (onClick)="borrar()" ></p-button>
+        </span>
+    </div>
+    
+    <div class="col-6">
+            
+    </div>
+ </div>

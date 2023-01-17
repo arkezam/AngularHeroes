@@ -22,7 +22,6 @@ export class HomeComponent {
           {name: 'agregar', code: 'agregar'},
           {name: 'buscar', code: 'buscar'},
           {name: 'listado', code: 'listado'},
-          {name: 'heroe', code: 'heroe'},
           
       ];
   }
