@@ -1,0 +1,9 @@
+<p>buscar works!</p>
+<h5>Basic</h5>
+<p-autoComplete [(ngModel)]="selectheroe" [showEmptyMessage]="true" [suggestions]="filteredHeroes"
+    (completeMethod)="filterCountry($event)" field="superhero" [minLength]="1"  >
+
+    <ng-template let-hero pTemplate="item">
+        <a [routerLink]="['/heroes/', hero.id]">{{hero.superhero}}</a>
+    </ng-template>
+</p-autoComplete>

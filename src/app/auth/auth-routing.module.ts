@@ -16,6 +16,10 @@ const routes: Routes = [
         component: RegisterComponent
       },
       {
+        path: 'registro/:id',
+        component: RegisterComponent
+      },
+      {
         path: '**',
         redirectTo: 'login'
       }
@@ -29,7 +33,7 @@ const routes: Routes = [
     RouterModule.forChild( routes )
   ],
   exports: [
-    RouterModule
+ 
   ]
 })
 export class AuthRoutingModule { }

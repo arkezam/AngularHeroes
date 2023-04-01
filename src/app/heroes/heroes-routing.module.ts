@@ -1,52 +1,28 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router'; 
+import { RouterModule, Routes } from '@angular/router';
+import { BuscarComponent } from '../prueba/buscar/buscar.component';
+import { HeroeComponent } from '../prueba/heroe/heroe.component';
 import { AgregarComponent } from './page/agregar/agregar.component';
-import { BuscarComponent } from './page/buscar/buscar.component';
-import { HeroeComponent } from './page/heroe/heroe.component';
 import { HomeComponent } from './page/home/home.component';
 import { ListadoComponent } from './page/listado/listado.component';
 
 const routes: Routes = [
   {
-    path: 'heroes',
+    path:'',
     component:HomeComponent,
-    children: [
-      {
-        path:'listado',
-        component:ListadoComponent
-      },
-      {
-        path: 'agregar',
-        component:AgregarComponent
- 
-      },
-      {
-        path:'editar/:id',
-        component:AgregarComponent
-      },
-      {
-        path:'buscar',
-        component:BuscarComponent
-      },
-      {
-        path:':id',
-        component:HeroeComponent
-      },
-      {
-        path: '**',
-        redirectTo: 'listado'
-      }
+    children:[
+    { path: 'listado', component: ListadoComponent },
+    { path: 'agregar', component: AgregarComponent },
+    { path: 'editar/:id', component: AgregarComponent },
+    { path: 'buscar', component: BuscarComponent },
+    { path: ':id', component: HeroeComponent },
+    { path: '**', redirectTo: 'listado' }
     ]
   }
-]
-
+];
 
 @NgModule({
-  imports: [
-    RouterModule.forChild( routes )
-  ],
-  exports: [
-    RouterModule
-  ]
+  imports: [RouterModule.forChild(routes)],
+ 
 })
 export class HeroesRoutingModule { }

@@ -1,17 +1,19 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router'; 
+import { Router } from '@angular/router';
+
 import { AuthService } from 'src/app/auth/services/auth.service';
+
 interface City {
   name: string,
   code: string
 }
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
+  selector: 'app-inicio',
+  templateUrl: './inicio.component.html',
   styles: [
   ]
 })
-export class HomeComponent {
+export class InicioComponent {
   display:boolean =false
 
 
@@ -22,7 +24,7 @@ export class HomeComponent {
       this.cities = [
           {name: 'agregar', code: 'agregar'},
           {name: 'buscar', code: 'buscar'},
-          {name: 'listado', code: 'listado'},
+          {name: 'lista', code: 'lista'},
           
       ];
   }
@@ -38,8 +40,7 @@ export class HomeComponent {
   }
  
     onCitySelect(city:City) { 
-      this.router.navigate(['/heroes', city.code])
+      this.router.navigate(['./prueba', city.code])
     
   }
-
 }

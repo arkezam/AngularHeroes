@@ -1,13 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
+import { HeroesRoutingModule } from './heroes-routing.module';
 import { HomeComponent } from './page/home/home.component';
 import { AgregarComponent } from './page/agregar/agregar.component';
 import { BuscarComponent } from './page/buscar/buscar.component';
-import { HeroesRoutingModule } from './heroes-routing.module';
 import { ListadoComponent } from './page/listado/listado.component';
 import { HeroeComponent } from './page/heroe/heroe.component';
-import { MatrialModule } from '../matrial/matrial.module';
 import { HeroetarjetaComponent } from './components/heroetarjeta/heroetarjeta.component';
+import { MatrialModule } from '../matrial/matrial.module';
 import { RouterModule } from '@angular/router';
 
 
@@ -18,15 +19,13 @@ import { RouterModule } from '@angular/router';
     BuscarComponent,
     ListadoComponent,
     HeroeComponent,
-    HeroetarjetaComponent
+    HeroetarjetaComponent,
+    
   ],
   imports: [
     CommonModule,
     HeroesRoutingModule,
     MatrialModule,
-    RouterModule
-  ],
-  exports:[
     RouterModule
   ]
 })
